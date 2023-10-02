@@ -23,6 +23,13 @@ class LoginViewController: UIViewController {
             welcomeVC.userName = userNameTF.text
         }
     }
+    
+    // Метод для скрытия клавиатуры тапом по экрану
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        userNameTF.resignFirstResponder()
+        passwordTF.resignFirstResponder()
+    }
 
     // MARK: - IBActions
     @IBAction func unwind(for segue: UIStoryboardSegue, sender: Any?){
