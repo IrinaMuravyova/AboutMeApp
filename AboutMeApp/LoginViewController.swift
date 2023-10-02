@@ -35,6 +35,7 @@ class LoginViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
+    
     @IBAction func forgotPasswordButtonTapped() {
         let alert = UIAlertController(title: "Oops!", message: "Your password is 111 😉", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -42,6 +43,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func logInButtonTapped() {
+        if userNameTF.text != userName || passwordTF.text != password {
+            let alert = UIAlertController(title: "Invalid login or password", message: "Please, enter correct login and password", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+            passwordTF.text = ""
+        }
         
     }
     
