@@ -9,7 +9,6 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    @IBOutlet var logOutButton: UIButton!
     @IBOutlet var welcomeLabel: UILabel!
     
     var userName: String!
@@ -19,11 +18,7 @@ class WelcomeViewController: UIViewController {
         setupGradient()
         welcomeLabel.textColor = .white
     
-        //добавить проверку, не выводить, если пустое
         welcomeLabel.text = "Welcome, \(userName ??  "")!"
-    }
-    
-    @IBAction func logOutButtonTapped() {
     }
     
     private func setupGradient() {

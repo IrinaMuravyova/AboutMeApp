@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31" y="-2"/>
+            <point key="canvasLocation" x="-36" y="-2"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="9gY-tg-13f">
@@ -125,7 +125,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="logOutButtonTapped" destination="AZC-nM-NUG" eventType="touchUpInside" id="GS2-8J-0bd"/>
+                                    <segue destination="RZK-FH-vLi" kind="unwind" unwindAction="unwindFor:sender:" id="K4N-Jn-7Y4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -142,11 +142,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="Znm-xw-btB"/>
                     <connections>
-                        <outlet property="logOutButton" destination="KYf-Bv-maE" id="R10-nJ-ave"/>
                         <outlet property="welcomeLabel" destination="sME-or-WjK" id="cDj-FM-Ti8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCE-6o-WcR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="RZK-FH-vLi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1565.625" y="-2.112676056338028"/>
         </scene>

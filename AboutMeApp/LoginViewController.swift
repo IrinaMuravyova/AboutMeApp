@@ -16,11 +16,6 @@ class LoginViewController: UIViewController {
     let userName = "User"
     let password = "111"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let viewController = tabBarVC.viewControllers else { return }
@@ -29,7 +24,13 @@ class LoginViewController: UIViewController {
         }
     }
 
-    // MARK: - IBActions    
+    // MARK: - IBActions
+    @IBAction func unwind(for segue: UIStoryboardSegue, sender: Any?){
+        dismiss(animated: true)
+        userNameTF.text = ""
+        passwordTF.text = ""
+    }
+    
     @IBAction func forgotUserNameButtonDidTap() {
         let alert = UIAlertController(title: "Oops!", message: "Your name is User 😉", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -49,10 +50,6 @@ class LoginViewController: UIViewController {
             present(alert, animated: true)
             passwordTF.text = ""
         }
-        
     }
-    
-    // MARK: - Private methods
-
 }
 
