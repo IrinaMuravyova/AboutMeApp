@@ -9,14 +9,13 @@ import UIKit
 
 class BioViewController: UIViewController {
     // MARK: - IBOutlet
-    @IBOutlet var bioLabel: UILabel!
-    
+    @IBOutlet var personsBioTV: UITextView!
     var personsBio: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGradient()
-        bioLabel.text = personsBio
+        personsBioTV.text = personsBio
     }
     
     // MARK: - Private methods
