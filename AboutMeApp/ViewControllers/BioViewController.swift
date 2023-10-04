@@ -9,9 +9,14 @@ import UIKit
 
 class BioViewController: UIViewController {
 
+    @IBOutlet var bioLabel: UILabel!
+    
+    var personsBio: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGradient()
+        bioLabel.text = personsBio
         // Do any additional setup after loading the view.
     }
     

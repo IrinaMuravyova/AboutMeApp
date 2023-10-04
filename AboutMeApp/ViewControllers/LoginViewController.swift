@@ -20,10 +20,20 @@ final class LoginViewController: UIViewController {
     // подготовка ViewController к переходу (инициализируем экземпляр класса и передаем в публичные свойства данные)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
-        guard let viewController = tabBarVC.viewControllers else { return }
-        if let welcomeVC = viewController.first as? WelcomeViewController {
-            welcomeVC.userName = userNameTF.text
-        }
+        guard let viewControllers = tabBarVC.viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userName = user.person.firstName
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let personVC = navigationVC.topViewController as? PersonViewController else { return }
+                    personVC.fullNameOfPerson = user.person.fullName
+                    personVC.aboutPerson = user.person.about
+                    personVC.personBio = user.person.bio
+                //            welcomeVC.photoOfPerson = user.person.photo
+            } else if let experienceVC = viewController as? ExperienceViewController {
+                experienceVC.experience = user.person.experience
+            }}
     }
     
     // Метод для скрытия клавиатуры тапом по экрану

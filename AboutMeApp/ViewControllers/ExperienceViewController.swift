@@ -8,11 +8,16 @@
 import UIKit
 
 class ExperienceViewController: UIViewController {
-
+    
+//    @IBOutlet experienceLabel: UILabel!
+    @IBOutlet var experienceLabel: UILabel!
+    
+    var experience: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGradient()
-
+        experienceLabel.text = experience
         // Do any additional setup after loading the view.
     }
     

@@ -12,17 +12,24 @@ final class PersonViewController: UIViewController {
     @IBOutlet var aboutPersonLabel: UILabel!
     @IBOutlet var personPhotoIV: UIImageView!
     
+    var fullNameOfPerson: String!
+    var aboutPerson: String!
+    var personBio: String!
+//    var photoOfPerson: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = fullNameOfPerson
+//        personPhotoIV.image = photoOfPerson
         personPhotoIV.layer.cornerRadius = view.frame.height/7.8
         setupGradient()
-        aboutPersonLabel.text = "Привет 🫰! Меня зовут Ирина" +
-        "\n\nЯ закончила крупнейший ВУЗ Урала по специальности Математика.Компьютерные науки" +
-        "\n\nОбожаю учиться и все анализировать!" +
-        "\n\nВ детстве строила выкройку фартука расчитывая логорифмы 😂" +
-        "\n\n8 лет живу в южном Китае" +
-        "\n15 лет в счастливом браке, мама дочки-дошколеночка 👧"
+        aboutPersonLabel.text = aboutPerson
         aboutPersonLabel.textColor = .white
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let bioVC = segue.destination as? BioViewController else { return }
+        bioVC.personsBio = personBio
     }
     
     private func setupGradient() {
