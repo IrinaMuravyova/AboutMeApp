@@ -13,8 +13,9 @@ final class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let userName = "User"
-    private let password = "111"
+//    private let userName = "User"
+//    private let password = "111"
+    private let user = User.getUser()
     
     // подготовка ViewController к переходу (инициализируем экземпляр класса и передаем в публичные свойства данные)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -40,15 +41,15 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotUserNameButtonDidTap() {
-        sendAlert(withTitle: "Oops!", andText: "Your name is \(userName) 😉")
+        sendAlert(withTitle: "Oops!", andText: "Your name is \(user.login) 😉")
     }
     
     @IBAction func forgotPasswordButtonTapped() {
-        sendAlert(withTitle: "Oops!", andText: "Your password is \(password) 😉")
+        sendAlert(withTitle: "Oops!", andText: "Your password is \(user.password) 😉")
     }
     
     @IBAction func logInButtonTapped() {
-        guard userNameTF.text == userName, passwordTF.text == password else {
+        guard userNameTF.text == user.login, passwordTF.text == user.password else {
             sendAlert(withTitle: "Invalid login or password",
                       andText: "Please, enter correct login and password",
                       textField: passwordTF)
