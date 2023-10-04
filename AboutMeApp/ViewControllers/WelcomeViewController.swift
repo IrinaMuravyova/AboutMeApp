@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UIViewController {
 
     @IBOutlet var welcomeLabel: UILabel!
     
@@ -17,7 +17,6 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         setupGradient()
         welcomeLabel.textColor = .white
-    
         welcomeLabel.text = "Welcome, \(userName ??  "")!"
     }
     
