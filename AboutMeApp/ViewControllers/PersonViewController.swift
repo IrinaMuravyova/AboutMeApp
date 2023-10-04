@@ -15,12 +15,10 @@ final class PersonViewController: UIViewController {
     var fullNameOfPerson: String!
     var aboutPerson: String!
     var personBio: String!
-//    var photoOfPerson: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = fullNameOfPerson
-//        personPhotoIV.image = photoOfPerson
         personPhotoIV.layer.cornerRadius = view.frame.height/7.8
         setupGradient()
         aboutPersonLabel.text = aboutPerson
@@ -32,10 +30,12 @@ final class PersonViewController: UIViewController {
         bioVC.personsBio = personBio
     }
     
+    // MARK: - Private methods
     private func setupGradient() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
-        gradientLayer.colors = [UIColor.systemPink.cgColor, UIColor.systemCyan.cgColor]
+        gradientLayer.colors = [UIColor.systemPink.cgColor,
+                                UIColor.systemCyan.cgColor]
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }

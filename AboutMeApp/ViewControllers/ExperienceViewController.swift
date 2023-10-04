@@ -9,7 +9,7 @@ import UIKit
 
 class ExperienceViewController: UIViewController {
     
-//    @IBOutlet experienceLabel: UILabel!
+    // MARK: - IBOutlets
     @IBOutlet var experienceLabel: UILabel!
     
     var experience: String!
@@ -18,23 +18,14 @@ class ExperienceViewController: UIViewController {
         super.viewDidLoad()
         setupGradient()
         experienceLabel.text = experience
-        // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    // MARK: - Private methods
     private func setupGradient() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
-        gradientLayer.colors = [UIColor.systemPink.cgColor, UIColor.systemCyan.cgColor]
+        gradientLayer.colors = [UIColor.systemPink.cgColor,
+                                UIColor.systemCyan.cgColor]
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }

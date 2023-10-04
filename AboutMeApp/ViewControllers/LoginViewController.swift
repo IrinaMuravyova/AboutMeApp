@@ -13,11 +13,8 @@ final class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-//    private let userName = "User"
-//    private let password = "111"
     private let user = User.getUser()
     
-    // подготовка ViewController к переходу (инициализируем экземпляр класса и передаем в публичные свойства данные)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarVC.viewControllers else { return }
@@ -30,17 +27,13 @@ final class LoginViewController: UIViewController {
                     personVC.fullNameOfPerson = user.person.fullName
                     personVC.aboutPerson = user.person.about
                     personVC.personBio = user.person.bio
-                //            welcomeVC.photoOfPerson = user.person.photo
             } else if let experienceVC = viewController as? ExperienceViewController {
                 experienceVC.experience = user.person.experience
             }}
     }
     
-    // Метод для скрытия клавиатуры тапом по экрану
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
-//        userNameTF.resignFirstResponder()
-//        passwordTF.resignFirstResponder()
         view.endEditing(true)
     }
 
@@ -51,11 +44,13 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotUserNameButtonDidTap() {
-        sendAlert(withTitle: "Oops!", andText: "Your name is \(user.login) 😉")
+        sendAlert(withTitle: "Oops!",
+                  andText: "Your name is \(user.login) 😉")
     }
     
     @IBAction func forgotPasswordButtonTapped() {
-        sendAlert(withTitle: "Oops!", andText: "Your password is \(user.password) 😉")
+        sendAlert(withTitle: "Oops!",
+                  andText: "Your password is \(user.password) 😉")
     }
     
     @IBAction func logInButtonTapped() {
@@ -65,15 +60,6 @@ final class LoginViewController: UIViewController {
                       textField: passwordTF)
             return
         }
-        // у нас переход напрямую от кнопки, поэтому, если логин/пароль верные, то срабатывает prepare и выполняется переход
-        // если сработает alert, то выдет warning сообщение о том, что alert прервал выполнение prepare.
-        // чтобы такого конфликта не было, нужно:
-        //по нажатию на кнопку делать валидацию данных, а не выполнять переход. И, если данные валидны, то тогде мы делаем переход программно.
-        //1. удаляем сигвей от кнопки
-        //2. добавляем переход от ViewController (выделяем  ViewController и от него тащим курсор на след.экран, выбираем PresentModally)
-        //3. Задаем segue идентификатор, чтобы потом программно можно было сказать в какой момент по нему переходить (showWelcomeVC)
-        //4. В экшене logInButtonTapped после guar вызываем метод perfomeSegue(withIdentfier: "showWelcomeVC", sender: nil)
-        // sender - может быть нил или можно сюда непосредственно передавать данные и этот sender станет доступным в методе prepare(for segue:)
     }
     
     // MARK: - Private methods

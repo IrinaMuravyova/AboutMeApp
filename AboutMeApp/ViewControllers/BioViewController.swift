@@ -8,7 +8,7 @@
 import UIKit
 
 class BioViewController: UIViewController {
-
+    // MARK: - IBOutlet
     @IBOutlet var bioLabel: UILabel!
     
     var personsBio: String!
@@ -17,23 +17,14 @@ class BioViewController: UIViewController {
         super.viewDidLoad()
         setupGradient()
         bioLabel.text = personsBio
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    // MARK: - Private methods
     private func setupGradient() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
-        gradientLayer.colors = [UIColor.systemPink.cgColor, UIColor.systemCyan.cgColor]
+        gradientLayer.colors = [UIColor.systemPink.cgColor,
+                                UIColor.systemCyan.cgColor]
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
