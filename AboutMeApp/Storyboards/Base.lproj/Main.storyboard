@@ -235,7 +235,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="kt0-vL-wHU">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8CV-JS-31B" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8CV-JS-31B" customClass="TabBarController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cpa-JO-gxL">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

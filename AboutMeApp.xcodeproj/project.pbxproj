@@ -19,6 +19,7 @@
 		88EF37DA2ACD548A0094901D /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EF37D92ACD548A0094901D /* BioViewController.swift */; };
 		88EF37DC2ACD549C0094901D /* ExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EF37DB2ACD549C0094901D /* ExperienceViewController.swift */; };
 		88EF37DE2ACE58E20094901D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EF37DD2ACE58E20094901D /* GradientView.swift */; };
+		88EF37E02ACE6D620094901D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EF37DF2ACE6D620094901D /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		88EF37D92ACD548A0094901D /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 		88EF37DB2ACD549C0094901D /* ExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewController.swift; sourceTree = "<group>"; };
 		88EF37DD2ACE58E20094901D /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		88EF37DF2ACE6D620094901D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				881E55A32ACACE2C004EB66D /* LoginViewController.swift */,
 				881E55B52ACACF47004EB66D /* WelcomeViewController.swift */,
 				88EF37D42ACC171D0094901D /* PersonViewController.swift */,
+				88EF37DF2ACE6D620094901D /* TabBarController.swift */,
 				88EF37D92ACD548A0094901D /* BioViewController.swift */,
 				88EF37DB2ACD549C0094901D /* ExperienceViewController.swift */,
 				88EF37DD2ACE58E20094901D /* GradientView.swift */,
@@ -191,6 +194,7 @@
 				88EF37DC2ACD549C0094901D /* ExperienceViewController.swift in Sources */,
 				88EF37DA2ACD548A0094901D /* BioViewController.swift in Sources */,
 				88EF37D52ACC171D0094901D /* PersonViewController.swift in Sources */,
+				88EF37E02ACE6D620094901D /* TabBarController.swift in Sources */,
 				881E55A42ACACE2C004EB66D /* LoginViewController.swift in Sources */,
 				88EF37D82ACD49DA0094901D /* User.swift in Sources */,
 				881E55B62ACACF47004EB66D /* WelcomeViewController.swift in Sources */,

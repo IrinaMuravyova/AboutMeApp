@@ -29,7 +29,9 @@ final class LoginViewController: UIViewController {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.user = user
             } else if let navigationVC = viewController as? UINavigationController {
-                guard let personVC = navigationVC.topViewController as? PersonViewController else { return }
+                let personVC = navigationVC.topViewController
+                guard let personVC = personVC as? PersonViewController else {
+                    return }
                 personVC.user = user
             } else if let experienceVC = viewController as? ExperienceViewController {
                 experienceVC.user = user
