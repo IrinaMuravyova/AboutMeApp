@@ -12,12 +12,12 @@ class ExperienceViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet var experienceLabel: UILabel!
     
-    var experience: String!
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGradient()
-        experienceLabel.text = experience
+        experienceLabel.text = user.person.experience
     }
 
     // MARK: - Private methods

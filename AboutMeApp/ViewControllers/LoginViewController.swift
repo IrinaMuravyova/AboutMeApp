@@ -15,21 +15,24 @@ final class LoginViewController: UIViewController {
     
     private let user = User.getUser()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        userNameTF.text = user.login
+        passwordTF.text = user.password
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarVC.viewControllers else { return }
         
         viewControllers.forEach { viewController in
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userName = user.person.firstName
+                welcomeVC.user = user
             } else if let navigationVC = viewController as? UINavigationController {
                 guard let personVC = navigationVC.topViewController as? PersonViewController else { return }
-                    personVC.fullNameOfPerson = user.person.fullName
-                    personVC.photoName = user.person.photo
-                    personVC.aboutPerson = user.person.about
-                    personVC.personBio = user.person.bio
+                personVC.user = user
             } else if let experienceVC = viewController as? ExperienceViewController {
-                experienceVC.experience = user.person.experience
+                experienceVC.user = user
             }}
     }
     

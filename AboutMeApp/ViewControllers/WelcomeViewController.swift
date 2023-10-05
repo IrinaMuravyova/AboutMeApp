@@ -11,13 +11,13 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet var welcomeLabel: UILabel!
     
-    var userName: String!
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGradient()
         welcomeLabel.textColor = .white
-        welcomeLabel.text = "Welcome, \(userName ??  "")!"
+        welcomeLabel.text = "Welcome, \(user.person.firstName ??  "")!"
     }
     
     private func setupGradient() {
