@@ -15,6 +15,8 @@ class BioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.setupGradient()
+        personsBioTV.backgroundColor = .clear
+        personsBioTV.textColor  = .white
         personsBioTV.text = personsBio
     }
 }

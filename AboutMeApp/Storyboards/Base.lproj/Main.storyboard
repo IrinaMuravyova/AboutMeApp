@@ -283,7 +283,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" alpha="0.29999999999999999" contentMode="scaleToFill" text="personsBio" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qOb-Vn-cR1">
+                            <textView clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" text="personsBio" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qOb-Vn-cR1">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
