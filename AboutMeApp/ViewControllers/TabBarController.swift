@@ -14,6 +14,5 @@ class TabBarController: UITabBarController {
         let appearance = UITabBarAppearance()
         tabBar.standardAppearance = appearance
         tabBar.scrollEdgeAppearance = appearance
-        
     }
 }

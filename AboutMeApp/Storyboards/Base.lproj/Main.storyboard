@@ -159,14 +159,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ir-Ua-Pm1" userLabel="personPhoto">
-                                <rect key="frame" x="89" y="114" width="142" height="142"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4ir-Ua-Pm1" userLabel="personPhoto">
+                                <rect key="frame" x="89" y="112.5" width="142" height="142"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4ir-Ua-Pm1" secondAttribute="height" multiplier="1:1" id="gPC-5y-T9s"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="aboutPerson" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="new-Vj-xGR">
-                                <rect key="frame" x="16" y="276" width="288" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="aboutPerson" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="new-Vj-xGR">
+                                <rect key="frame" x="16" y="274.5" width="288" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -179,6 +179,7 @@
                             <constraint firstItem="Bdd-Ov-uJ9" firstAttribute="trailing" secondItem="new-Vj-xGR" secondAttribute="trailing" constant="16" id="90X-Zt-Nzk"/>
                             <constraint firstItem="4ir-Ua-Pm1" firstAttribute="height" secondItem="eRw-zJ-6RP" secondAttribute="height" multiplier="0.25" id="Ge0-Lr-Hi1"/>
                             <constraint firstItem="Bdd-Ov-uJ9" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="new-Vj-xGR" secondAttribute="bottom" constant="20" id="MxX-z4-5da"/>
+                            <constraint firstItem="4ir-Ua-Pm1" firstAttribute="top" secondItem="Bdd-Ov-uJ9" secondAttribute="top" constant="20" id="RJa-Cr-TwZ"/>
                             <constraint firstItem="new-Vj-xGR" firstAttribute="leading" secondItem="Bdd-Ov-uJ9" secondAttribute="leading" constant="16" id="VJm-zV-ZaL"/>
                             <constraint firstItem="4ir-Ua-Pm1" firstAttribute="centerX" secondItem="eRw-zJ-6RP" secondAttribute="centerX" id="kqS-ez-39K"/>
                         </constraints>

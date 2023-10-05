@@ -7,28 +7,14 @@
 
 import UIKit
 
-class GradientView: UIView {
-    
-    private let gradientLayer = CAGradientLayer()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setupGradient()
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        gradientLayer.frame = bounds
-    }
+extension UIView {
+
     func setupGradient() {
-        self.layer.addSublayer(gradientLayer)
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = bounds
         gradientLayer.colors = [UIColor.systemPink.cgColor,
                                 UIColor.systemCyan.cgColor]
-//        view.layer.insertSublayer(gradientLayer, at: 0)
+        layer.insertSublayer(gradientLayer, at: 0)
     }
 
 }

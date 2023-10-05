@@ -14,16 +14,7 @@ class BioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupGradient()
+        view.setupGradient()
         personsBioTV.text = personsBio
-    }
-    
-    // MARK: - Private methods
-    private func setupGradient() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = view.bounds
-        gradientLayer.colors = [UIColor.systemPink.cgColor,
-                                UIColor.systemCyan.cgColor]
-        view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
