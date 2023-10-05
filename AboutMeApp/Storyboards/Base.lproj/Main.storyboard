@@ -159,7 +159,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="IMG_7554" translatesAutoresizingMaskIntoConstraints="NO" id="4ir-Ua-Pm1" userLabel="personPhoto">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ir-Ua-Pm1" userLabel="personPhoto">
                                 <rect key="frame" x="89" y="114" width="142" height="142"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4ir-Ua-Pm1" secondAttribute="height" multiplier="1:1" id="gPC-5y-T9s"/>
@@ -259,7 +259,7 @@
                     <tabBarItem key="tabBarItem" title="Person" image="person.fill" catalog="system" id="DQa-uv-LCa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="TN2-vH-plu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -283,7 +283,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" alpha="0.29999999999999999" contentMode="scaleToFill" text="personsBio" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qOb-Vn-cR1">
-                                <rect key="frame" x="16" y="0.0" width="288" height="499"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -293,10 +293,10 @@
                         <viewLayoutGuide key="safeArea" id="LBs-wW-lg4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LBs-wW-lg4" firstAttribute="trailing" secondItem="qOb-Vn-cR1" secondAttribute="trailing" constant="16" id="GSC-Nz-WGM"/>
+                            <constraint firstItem="LBs-wW-lg4" firstAttribute="trailing" secondItem="qOb-Vn-cR1" secondAttribute="trailing" id="GSC-Nz-WGM"/>
                             <constraint firstItem="qOb-Vn-cR1" firstAttribute="top" secondItem="1Kb-Z8-IQ8" secondAttribute="top" id="Hyl-3t-2x6"/>
-                            <constraint firstItem="qOb-Vn-cR1" firstAttribute="leading" secondItem="LBs-wW-lg4" secondAttribute="leading" constant="16" id="Sc8-RW-Pka"/>
-                            <constraint firstItem="LBs-wW-lg4" firstAttribute="bottom" secondItem="qOb-Vn-cR1" secondAttribute="bottom" constant="20" id="wYW-db-Nv6"/>
+                            <constraint firstItem="qOb-Vn-cR1" firstAttribute="leading" secondItem="LBs-wW-lg4" secondAttribute="leading" id="Sc8-RW-Pka"/>
+                            <constraint firstItem="LBs-wW-lg4" firstAttribute="bottom" secondItem="qOb-Vn-cR1" secondAttribute="bottom" id="wYW-db-Nv6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jsj-iY-Dgn"/>
@@ -310,7 +310,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IMG_7554" width="753" height="753"/>
         <image name="doc.text.image.fill" catalog="system" width="115" height="128"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>

@@ -15,10 +15,13 @@ final class PersonViewController: UIViewController {
     var fullNameOfPerson: String!
     var aboutPerson: String!
     var personBio: String!
+    var photoName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = fullNameOfPerson
+        let image = UIImage(named: photoName)
+        personPhotoIV.image = image
         personPhotoIV.layer.cornerRadius = view.frame.height/7.8
         setupGradient()
         aboutPersonLabel.text = aboutPerson

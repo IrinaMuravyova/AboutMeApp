@@ -25,6 +25,7 @@ final class LoginViewController: UIViewController {
             } else if let navigationVC = viewController as? UINavigationController {
                 guard let personVC = navigationVC.topViewController as? PersonViewController else { return }
                     personVC.fullNameOfPerson = user.person.fullName
+                    personVC.photoName = user.person.photo
                     personVC.aboutPerson = user.person.about
                     personVC.personBio = user.person.bio
             } else if let experienceVC = viewController as? ExperienceViewController {
